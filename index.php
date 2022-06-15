@@ -1,3 +1,8 @@
+<?php
+require 'create4.php';
+include_once 'config2.php';
+require 'add.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,6 +124,60 @@
       </div>
 
     </div>
+
+  
     </div>
+   
+
+    </div>
+
+
+<div class="w3">
+  <form action="create4.php">
+    <label for="user">User</label>
+    <input type="text" id="user" name="user" placeholder="Your name..">
+
+    <label for="location">Location</label>
+    <input type="text" id="location" name="location" placeholder="Location">
+
+    <label for="description">Description</label>
+    <input type="text" id="description" name="description" placeholder="Description">
+<!--
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+-->
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div id="add">
+<form action="add.php" method="post">
+<label>Student Name :</label>
+<input type="text" name="user" id="user" required="required" placeholder="Please Enter Name"/><br /><br />
+<label>Student Email :</label>
+<input type="text" name="location" id="location" required="required" placeholder="john123@gmail.com"/><br/><br />
+<label>Student City :</label>
+<input type="text" name="description" id="description" required="required" placeholder="Please Enter Your City"/><br/><br />
+<input type="submit" value=" Submit " name="submit"/><br />
+</form>
+</div>
+<!--
+<div id="add">
+<form action="" method="post">
+<label>Student Name :</label>
+<input type="text" name="stu_name" id="name" required="required" placeholder="Please Enter Name"/><br /><br />
+<label>Student Email :</label>
+<input type="email" name="stu_email" id="email" required="required" placeholder="john123@gmail.com"/><br/><br />
+<label>Student City :</label>
+<input type="text" name="stu_city" id="city" required="required" placeholder="Please Enter Your City"/><br/><br />
+<input type="submit" value=" Submit " name="submit"/><br />
+</form>
+</div>
+-->
 </body>
 </html>

@@ -9,4 +9,20 @@ try {
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }
+
+$new_issue = array(
+    "user" => $_POST['user'],
+    "location"  => $_POST['location'],
+    "description"     => $_POST['description']
+  );
+  
+  $sql = sprintf(
+    "INSERT INTO %s (%s) values (%s)",
+    "issues",
+    implode(", ", array_keys($new_issue)),
+    ":" . implode(", :", array_keys($new_issue))
+);
+
+$statement = $connection->prepare($sql);
+$statement->execute($new_issue); 
 ?>
